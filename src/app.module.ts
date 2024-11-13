@@ -18,6 +18,7 @@ import { AuthModule } from './auth/auth.module';
       playground: true,
       autoSchemaFile: 'schema.gql',
       context: ({ req }) => ({ req }), // Pass the 'req' object into context
+      introspection: true,
     }),
     EmployeesModule,
     AuthModule,
