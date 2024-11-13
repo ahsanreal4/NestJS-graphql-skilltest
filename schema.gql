@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""employee data"""
+type EmployeeDataResolverModel {
+  age: Float!
+  class: String!
+  subjects: [String!]!
+  attendances: [String!]!
+}
+
+"""user"""
+type UserResolverModel {
+  _id: String!
+  name: String!
+  email: String!
+  role: String!
+  data: EmployeeDataResolverModel
+}
+
+"""Get Employees Response"""
+type GetEmployeesResponse {
+  data: [UserResolverModel!]!
+  totalCount: Float!
+  page: Float!
+  limit: Float!
+}
+
+type Query {
+  getEmployees(paginationInput: PaginationDto!): GetEmployeesResponse!
+  getEmployeesByName(name: String!): [UserResolverModel!]!
+  getEmployeesByClass(className: String!): [UserResolverModel!]!
+  getEmployeeById(id: String!): UserResolverModel!
+  getProfile: UserResolverModel!
+}
+
+input PaginationDto {
+  page: Float = 1
+  limit: Float = 10
+  sortBy: String = "name"
+  order: String = "asc"
+}
+
+type Mutation {
+  createEmployee(createEmployeeInput: CreateEmployeeInput!): UserResolverModel!
+  deleteEmployeeById(id: String!): String!
+  login(email: String!, password: String!): String!
+}
+
+input CreateEmployeeInput {
+  name: String!
+  email: String!
+  age: Float!
+  password: String!
+  class: String!
+  subjects: [String!]!
+  attendances: [String!]!
+}
