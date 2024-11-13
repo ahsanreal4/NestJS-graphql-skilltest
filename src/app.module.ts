@@ -16,7 +16,7 @@ import { AuthModule } from './auth/auth.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       playground: true,
-      autoSchemaFile: 'schema.gql',
+      autoSchemaFile: true,
       context: ({ req }) => ({ req }), // Pass the 'req' object into context
     }),
     EmployeesModule,
