@@ -2,9 +2,9 @@ import { BadGatewayException, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { User } from 'src/common/schema/database/user.model';
+import { User } from '../common/schema/database/user.model';
 import { Model } from 'mongoose';
-import { Role } from 'src/common/enums/userRole';
+import { Role } from '../common/enums/userRole';
 
 @Injectable()
 export class AuthService {

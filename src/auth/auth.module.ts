@@ -3,7 +3,7 @@ import { AuthService } from './auth.service';
 import { AuthResolver } from './auth.resolver';
 import { JwtModule } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
-import { User, UserSchema } from 'src/common/schema/database/user.model';
+import { User, UserSchema } from '../common/schema/database/user.model';
 import { JwtAuthGuard } from './auth.guard';
 
 @Module({

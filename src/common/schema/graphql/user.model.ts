@@ -1,6 +1,6 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 import { EmployeeDataResolverModel } from './employeeData.model';
-import { Role } from 'src/common/enums/userRole';
+import { Role } from '../../../common/enums/userRole';
 
 @ObjectType({ description: 'user' })
 export class UserResolverModel {

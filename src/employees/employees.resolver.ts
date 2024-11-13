@@ -1,12 +1,12 @@
 // sample.resolver.ts
 import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
-import { UserResolverModel } from 'src/common/schema/graphql/user.model';
+import { UserResolverModel } from '../common/schema/graphql/user.model';
 import { EmployeesService } from './employees.service';
-import { CreateEmployeeInput } from 'src/common/schema/graphql/inputs/createEmployeeInput';
+import { CreateEmployeeInput } from '../common/schema/graphql/inputs/createEmployeeInput';
 import { UseGuards } from '@nestjs/common';
-import { IsAdminGuard } from 'src/auth/isAdmin.guard';
-import { PaginationDto } from 'src/common/schema/graphql/inputs/paginationInput';
-import { GetEmployeesResponse } from 'src/common/schema/graphql/responses/paginationResponse';
+import { IsAdminGuard } from '../auth/isAdmin.guard';
+import { PaginationDto } from '../common/schema/graphql/inputs/paginationInput';
+import { GetEmployeesResponse } from '../common/schema/graphql/responses/paginationResponse';
 
 @UseGuards(IsAdminGuard)
 @Resolver(() => UserResolverModel)

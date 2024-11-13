@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Role } from 'src/common/enums/userRole';
-import { User } from 'src/common/schema/database/user.model';
+import { Role } from '../common/enums/userRole';
+import { User } from '../common/schema/database/user.model';
 import { Model } from 'mongoose';
-import { CreateEmployeeInput } from 'src/common/schema/graphql/inputs/createEmployeeInput';
-import { EmployeeData } from 'src/common/schema/database/employeeData.model';
-import { PaginationDto } from 'src/common/schema/graphql/inputs/paginationInput';
+import { CreateEmployeeInput } from '../common/schema/graphql/inputs/createEmployeeInput';
+import { EmployeeData } from '../common/schema/database/employeeData.model';
+import { PaginationDto } from '../common/schema/graphql/inputs/paginationInput';
 
 @Injectable()
 export class EmployeesService {

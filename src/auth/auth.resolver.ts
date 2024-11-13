@@ -1,6 +1,6 @@
 import { Resolver, Mutation, Args, Context, Query } from '@nestjs/graphql';
 import { AuthService } from './auth.service';
-import { UserResolverModel } from 'src/common/schema/graphql/user.model';
+import { UserResolverModel } from '../common/schema/graphql/user.model';
 import { UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from './auth.guard';
 
